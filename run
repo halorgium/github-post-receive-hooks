@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'bundler'
+Bundler.setup
+$:.unshift 'lib'
+
+require 'github-post-receive-hooks'
+require 'config'
+PostreceiveHooks.run(@user, @token, @repo, @urls)

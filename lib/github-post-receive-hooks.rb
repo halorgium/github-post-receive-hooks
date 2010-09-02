@@ -1,11 +1,6 @@
-#!/usr/bin/env ruby
-
 require 'net/http'
 require 'net/https'
-
 require 'nokogiri'
-
-require 'config'
 
 class PostreceiveHooks
   def self.run(user, token, repo, urls)
@@ -97,5 +92,3 @@ class PostreceiveHooks
     [[:login, @user], [:token, @token]]
   end
 end
-
-PostreceiveHooks.run(@user, @token, @repo, @urls)
